@@ -40,10 +40,10 @@ asmfunc PROC p1:DWORD, p2:DWORD         ; There are 2 parameters
         
         ; Print Message string
 
-        mov edx,offset msg  
+        mov edx,offset msg 
         call writestring
-
     
+
     ret
 asmfunc ENDP
 end

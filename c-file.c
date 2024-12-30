@@ -1,6 +1,10 @@
 
 #include <stdio.h>
 
+// Write a program that takes an array of numbers
+//  (with both zero and non-zero values)
+//  from the user (or declare ) and displays the total no. 
+//  of all zero values from the array
 
 //extern "C" void __stdcall asmfunc(void);
 
@@ -8,7 +12,7 @@
 extern "C" {
 #endif
 
-void __stdcall asmfunc(int p1 ,int p2);
+void __stdcall asmfunc(int p1 ,int *p2);
 
 #ifdef __cplusplus
 }
@@ -17,17 +21,18 @@ void __stdcall asmfunc(int p1 ,int p2);
 
 int main() {
     system("cls");
-    int abc;
+    int arry[] = {1,0,0,0,1,0,1,0};
+    int tot = 0;
     printf("assembly proc calling from  from C! \n");
 getch();
-
     
-    asmfunc(3,5); //assembly proc calling
+    
+    asmfunc(arry,& tot);
    
-   getch();
+    getch();
     
     
-    printf("back to  C! \n"); // printing in c
+    printf("\nTotal no of zero's are:  %d\n",tot);        // printing in c
     
   
     
